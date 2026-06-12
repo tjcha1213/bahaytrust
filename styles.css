@@ -12,6 +12,8 @@
   --accent: #6fb6ff;
   --accent-2: #9ed6ff;
   --accent-3: #2f6fd6;
+  --accent-4: #c8e8ff;
+  --accent-5: #edf7ff;
   --shadow: rgba(73, 123, 196, 0.16);
 }
 
@@ -29,6 +31,7 @@ body {
   background:
     radial-gradient(circle at 10% 12%, rgba(111, 182, 255, 0.26), transparent 26%),
     radial-gradient(circle at 85% 15%, rgba(158, 214, 255, 0.32), transparent 22%),
+    radial-gradient(circle at 74% 58%, rgba(255, 255, 255, 0.72), transparent 20%),
     radial-gradient(circle at 50% 100%, rgba(47, 111, 214, 0.12), transparent 34%),
     linear-gradient(180deg, #f7fbff 0%, #edf6ff 52%, #e2f0ff 100%);
   color: var(--ink-dark);
@@ -51,7 +54,7 @@ a {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 30px;
+  border-radius: 34px;
   backdrop-filter: blur(18px);
   box-shadow: 0 24px 70px var(--shadow);
 }
@@ -84,6 +87,12 @@ a {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(111, 182, 255, 0.28), transparent 64%);
   filter: blur(10px);
+}
+
+.hero-home::before {
+  background:
+    radial-gradient(circle at 22% 20%, rgba(255, 255, 255, 0.72), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), transparent 38%);
 }
 
 .topbar,
@@ -126,7 +135,7 @@ a {
   height: 44px;
   display: grid;
   place-items: center;
-  border-radius: 18px;
+  border-radius: 20px;
   background: linear-gradient(135deg, #7fc2ff, #d7ecff);
   color: #1b4f89;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -256,7 +265,7 @@ h3 {
   padding: 0 22px;
   border-radius: 999px;
   border: 1px solid transparent;
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .button:hover,
@@ -269,12 +278,28 @@ h3 {
   color: #ffffff;
   font-weight: 700;
   box-shadow: 0 12px 24px rgba(47, 111, 214, 0.22);
+  position: relative;
 }
 
 .button-secondary {
   border-color: var(--line);
   background: rgba(255, 255, 255, 0.74);
   color: var(--ink-dark);
+}
+
+.button-primary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.12);
+}
+
+.button-secondary:hover,
+.button-primary:hover {
+  box-shadow: 0 16px 30px rgba(47, 111, 214, 0.18);
 }
 
 .hero-panel,
@@ -288,7 +313,7 @@ h3 {
 .adviser-card,
 .adviser-panel,
 .ticker {
-  border-radius: 24px;
+  border-radius: 28px;
 }
 
 .hero-panel,
@@ -297,6 +322,7 @@ h3 {
 .adviser-panel {
   background: rgba(255, 255, 255, 0.76);
   border: 1px solid var(--line);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .hero-panel {
@@ -307,6 +333,16 @@ h3 {
   background: linear-gradient(135deg, rgba(111, 182, 255, 0.22), rgba(158, 214, 255, 0.42));
   padding: 22px;
   border: 1px solid rgba(74, 132, 201, 0.16);
+  position: relative;
+}
+
+.stat-card::after {
+  content: "✦";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: rgba(47, 111, 214, 0.38);
+  font-size: 1rem;
 }
 
 .stat-label,
@@ -337,6 +373,7 @@ h3 {
   gap: 14px;
   padding: 14px;
   background: rgba(245, 250, 255, 0.92);
+  border: 1px solid rgba(96, 156, 224, 0.14);
 }
 
 .hero-notes span {
@@ -362,6 +399,7 @@ h3 {
   background: rgba(224, 240, 255, 0.92);
   color: #456b96;
   font-size: 0.92rem;
+  border: 1px solid rgba(96, 156, 224, 0.16);
 }
 
 .section {
@@ -431,10 +469,12 @@ h3 {
 .source-card,
 .partner-card {
   padding: 22px;
+  position: relative;
 }
 
 .feature-card {
   background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .founder-card,
@@ -454,7 +494,32 @@ h3 {
 .placeholder-card,
 .source-card,
 .partner-card {
-  border-radius: 24px;
+  border-radius: 28px;
+}
+
+.founder-card,
+.contact-card,
+.metric-card,
+.adviser-card,
+.research-block,
+.placeholder-card,
+.source-card,
+.partner-card {
+  box-shadow: 0 14px 32px rgba(98, 148, 217, 0.08);
+}
+
+.founder-card::before,
+.metric-card::before,
+.partner-card::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  opacity: 0.6;
 }
 
 .research-stack {
@@ -520,6 +585,7 @@ h3 {
   min-height: 220px;
   display: grid;
   align-content: center;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.55), rgba(221, 240, 255, 0.8));
 }
 
 .quote {
@@ -566,6 +632,15 @@ h3 {
   color: #2f6fd6;
 }
 
+.feature-card h3,
+.founder-card h3,
+.partner-card h3,
+.adviser-card h3,
+.placeholder-title,
+.contact-card a {
+  letter-spacing: -0.01em;
+}
+
 .adviser-panel {
   min-height: 100%;
 }
@@ -604,7 +679,7 @@ h3 {
 
   .hero,
   .section {
-    border-radius: 24px;
+    border-radius: 28px;
     padding: 22px 18px;
   }
 
