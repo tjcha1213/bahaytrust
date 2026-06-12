@@ -215,10 +215,18 @@ p {
 }
 
 h1 {
-  font-size: clamp(3.2rem, 8vw, 6.4rem);
+  font-size: clamp(2.45rem, 5.9vw, 4.9rem);
   line-height: 0.94;
   margin-bottom: 22px;
   max-width: 9ch;
+}
+
+.hero-title {
+  max-width: 12ch;
+}
+
+.emoji-pair {
+  white-space: nowrap;
 }
 
 h2 {
@@ -684,7 +692,7 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.8rem, 15vw, 4.5rem);
+    font-size: clamp(2.2rem, 11vw, 3.45rem);
   }
 
   .button {
