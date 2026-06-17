@@ -611,7 +611,22 @@ h3 {
   padding: 22px 22px 24px;
 }
 
-.map-lead {
+.map-insight-list {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(111, 182, 255, 0.12);
+  border: 1px solid rgba(53, 107, 176, 0.16);
+  color: var(--ink-dark);
+  line-height: 1.6;
+  padding-left: 34px;
+}
+
+.map-insight-list li {
+  margin: 0;
+}
+
+.map-analysis {
   color: var(--ink-dark);
   font-size: 1rem;
   line-height: 1.7;
