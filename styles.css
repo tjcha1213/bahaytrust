@@ -3,10 +3,10 @@
   --bg-soft: #dceeff;
   --panel: rgba(248, 252, 255, 0.82);
   --panel-light: rgba(255, 255, 255, 0.94);
-  --ink: #12345b;
-  --ink-dark: #173252;
-  --muted: rgba(18, 52, 91, 0.72);
-  --muted-dark: #5e7693;
+  --ink: #0f2a49;
+  --ink-dark: #102846;
+  --muted: rgba(16, 40, 70, 0.96);
+  --muted-dark: #244564;
   --line: rgba(53, 107, 176, 0.18);
   --line-dark: rgba(45, 95, 163, 0.14);
   --accent: #6fb6ff;
@@ -163,7 +163,7 @@ h3,
 .topbar-links {
   justify-content: flex-end;
   gap: 20px;
-  color: var(--muted-dark);
+  color: var(--ink-dark);
 }
 
 .topbar-links a {
@@ -200,12 +200,17 @@ h3,
   align-items: start;
 }
 
+.page-intro-single {
+  grid-template-columns: 1fr;
+}
+
 .eyebrow {
   margin: 0 0 12px;
-  color: var(--accent-3);
+  color: #1a4f8e;
   font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 h1,
@@ -219,11 +224,11 @@ h1 {
   font-size: clamp(2.45rem, 5.9vw, 4.9rem);
   line-height: 0.94;
   margin-bottom: 22px;
-  max-width: 9ch;
+  max-width: 100%;
 }
 
 .hero-title {
-  max-width: 12ch;
+  max-width: 100%;
 }
 
 .emoji-pair {
@@ -254,10 +259,22 @@ h3 {
   font-size: 1.03rem;
 }
 
+.hero-text,
+.section-copy,
+.contact-copy,
+.section-heading p {
+  width: 100%;
+  max-width: 100%;
+}
+
 .section-copy,
 .contact-copy {
   margin-top: 16px;
-  max-width: 60ch;
+  max-width: 100%;
+}
+
+.compact-copy {
+  margin-top: 18px;
 }
 
 .hero-actions {
@@ -437,14 +454,68 @@ h3 {
 }
 
 .section-heading {
-  max-width: 780px;
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 28px;
   position: relative;
   z-index: 1;
 }
 
+.section-heading > * {
+  width: 100%;
+  max-width: 100%;
+}
+
+.next-steps-intro,
+.next-steps-intro > *,
+.next-steps-intro .hero-text {
+  width: 100%;
+  max-width: 100%;
+}
+
+.geospatial-intro,
+.geospatial-intro > *,
+.geospatial-intro .hero-text {
+  width: 100%;
+  max-width: 100%;
+}
+
+.research-intro,
+.research-intro > *,
+.research-intro .hero-text {
+  width: 100%;
+  max-width: 100%;
+}
+
+.research-intro-title {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 14px;
+  color: #1a4f8e;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 1.08;
+}
+
+.geospatial-section .research-intro {
+  margin-bottom: 28px;
+}
+
 .section-heading.compact {
   margin-bottom: 0;
+}
+
+.geospatial-intro h2,
+.next-steps-intro h2 {
+  color: #1a4f8e;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.research-intro .hero-text,
+.geospatial-intro .hero-text,
+.next-steps-intro .hero-text {
+  margin-top: 0;
 }
 
 .opportunity-grid {
@@ -563,10 +634,11 @@ h3 {
 
 .block-label {
   margin-bottom: 10px;
-  color: #4672a1;
+  color: #1a4f8e;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 0.72rem;
+  font-size: 0.88rem;
+  font-weight: 800;
 }
 
 .research-list,
@@ -587,6 +659,15 @@ h3 {
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 1.3rem;
   margin-bottom: 12px;
+  color: #173252;
+}
+
+.map-analysis,
+.placeholder-note,
+.map-insight-list,
+.source-list,
+.research-list {
+  color: var(--muted);
 }
 
 .map-gallery {
@@ -647,6 +728,21 @@ h3 {
   min-height: 160px;
 }
 
+.source-card-wide {
+  min-height: auto;
+  padding: 24px;
+}
+
+.source-card-wide .placeholder-note + .placeholder-note {
+  margin-top: 16px;
+}
+
+.source-card-wide a {
+  color: #1a4f8e;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .partner-card {
   min-height: 220px;
 }
@@ -673,7 +769,7 @@ h3 {
 .quote {
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.02;
-  max-width: 15ch;
+  max-width: 100%;
   margin-bottom: 18px;
 }
 
@@ -765,6 +861,7 @@ h3 {
     border-radius: 28px;
     padding: 22px 18px;
   }
+
 
   h1 {
     font-size: clamp(2.2rem, 11vw, 3.45rem);
