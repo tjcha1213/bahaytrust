@@ -44,7 +44,8 @@ a {
 }
 
 strong {
-  color: #3f51e5;
+  color: #4338ca !important;
+  font-weight: 800;
 }
 
 .page-shell {
