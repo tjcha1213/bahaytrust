@@ -43,6 +43,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  color: #3f51e5;
+}
+
 .page-shell {
   width: min(1180px, calc(100% - 28px));
   margin: 0 auto;
