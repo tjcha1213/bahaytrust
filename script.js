@@ -11,3 +11,13 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((card) => observer.observe(card));
+
+document.querySelectorAll(".founder-card-expand").forEach((card) => {
+  card.addEventListener("toggle", () => {
+    if (!card.open) return;
+
+    document.querySelectorAll(".founder-card-expand").forEach((otherCard) => {
+      if (otherCard !== card) otherCard.open = false;
+    });
+  });
+});
