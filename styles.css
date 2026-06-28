@@ -934,6 +934,25 @@ h3 {
   padding: 28px 26px 26px;
 }
 
+.map-modal-card h3 {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a4f8e;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.map-modal-card .founder-role {
+  margin-bottom: 8px;
+  color: var(--muted-dark);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
 .map-frame-modal {
   margin-top: 18px;
   aspect-ratio: auto;
