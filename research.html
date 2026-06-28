@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
+    <div class="page-shell" id="top">
       <header class="hero hero-page">
         <nav class="topbar">
           <div class="brand">
@@ -71,7 +71,7 @@
           </div>
           <div class="map-gallery">
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/1_UTS_layout_default.png" alt="Base map of Metro Manila study area." />
+              <a class="map-card-link" href="#map-modal-1">
               <div class="map-copy">
                 <p class="block-label">1. Base geography</p>
                 <p class="map-analysis">
@@ -89,9 +89,10 @@
                   <li>All later accessibility and market signals are meaningful because they are located within this shared metro context.</li>
                 </ul>
               </div>
+              </a>
             </article>
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/2_UTS_layout_pop_density.png" alt="Population density map across the study area." />
+              <a class="map-card-link" href="#map-modal-2">
               <div class="map-copy">
                 <p class="block-label">2. Population density</p>
                 <p class="map-analysis">
@@ -109,9 +110,10 @@
                   <li>Metro-wide coverage is less useful than focusing on the densest urban bands.</li>
                 </ul>
               </div>
+              </a>
             </article>
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/3_UTS_layout_pop_density_districts.png" alt="Population density by district map." />
+              <a class="map-card-link" href="#map-modal-3">
               <div class="map-copy">
                 <p class="block-label">3. Density by district</p>
                 <p class="map-analysis">
@@ -134,9 +136,10 @@
                   <li>These overlaps help identify where demand for microhousing is more likely to be strong enough to justify user testing.</li>
                 </ul>
               </div>
+              </a>
             </article>
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/4_UTS_layout_transportation_accessibility.png" alt="Transportation accessibility overlay." />
+              <a class="map-card-link" href="#map-modal-4">
               <div class="map-copy">
                 <p class="block-label">4. Transportation accessibility</p>
                 <p class="map-analysis">
@@ -164,9 +167,10 @@
                   <li>Jeepney stops are assessed through density rather than buffers because their prevalence would otherwise obscure meaningful variation.</li>
                 </ul>
               </div>
+              </a>
             </article>
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/5_UTS_layout_hospital_accessibility.png" alt="Hospital accessibility overlay." />
+              <a class="map-card-link" href="#map-modal-5">
               <div class="map-copy">
                 <p class="block-label">5. Hospital accessibility</p>
                 <p class="map-analysis">
@@ -191,9 +195,10 @@
                   <li>Hospital proximity is informative, but not all hospitals are equal in size or capacity, so this layer should be read as a proxy rather than a full quality measure.</li>
                 </ul>
               </div>
+              </a>
             </article>
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/6_UTS_layout_urban_accessibility_composite.png" alt="Composite urban accessibility map." />
+              <a class="map-card-link" href="#map-modal-6">
               <div class="map-copy">
                 <p class="block-label">6. Urban accessibility composite</p>
                 <p class="map-analysis">
@@ -216,9 +221,10 @@
                   <li>The strongest candidate sites are where accessibility, population density, and proximity to both business and university districts overlap most clearly.</li>
                 </ul>
               </div>
+              </a>
             </article>
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/7_UTS_layout_competitor_lisitngs.png" alt="Competitor listing distribution map." />
+              <a class="map-card-link" href="#map-modal-7">
               <div class="map-copy">
                 <p class="block-label">7. Competitor listings</p>
                 <p class="map-analysis">
@@ -243,9 +249,10 @@
                   <li>The domestic competitor's concentration west of Makati and near Manila Bay is more informative for microhousing-relevant user-testing demand.</li>
                 </ul>
               </div>
+              </a>
             </article>
             <article class="map-card reveal">
-              <img class="map-frame" src="assets/research-maps/8_UTS_layout_competitor_lisitngs_density.png" alt="Competitor listing density heatmap." />
+              <a class="map-card-link" href="#map-modal-8">
               <div class="map-copy">
                 <p class="block-label">8. Competitor listing density</p>
                 <p class="map-analysis">
@@ -271,9 +278,90 @@
                   <li>That northern zone may therefore be another viable testing location, especially if <strong>Roomie</strong> wants to test demand in a less saturated competitive pocket.</li>
                 </ul>
               </div>
+              </a>
             </article>
           </div>
         </section>
+
+        <div class="founder-modal map-modal" id="map-modal-1" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-1-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 1</p>
+            <h3 id="map-modal-1-title">Base geography</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/1_UTS_layout_default.png" alt="Base map of Metro Manila study area." />
+          </div>
+        </div>
+
+        <div class="founder-modal map-modal" id="map-modal-2" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-2-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 2</p>
+            <h3 id="map-modal-2-title">Population density</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/2_UTS_layout_pop_density.png" alt="Population density map across the study area." />
+          </div>
+        </div>
+
+        <div class="founder-modal map-modal" id="map-modal-3" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-3-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 3</p>
+            <h3 id="map-modal-3-title">Density by district</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/3_UTS_layout_pop_density_districts.png" alt="Population density by district map." />
+          </div>
+        </div>
+
+        <div class="founder-modal map-modal" id="map-modal-4" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-4-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 4</p>
+            <h3 id="map-modal-4-title">Transportation accessibility</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/4_UTS_layout_transportation_accessibility.png" alt="Transportation accessibility overlay." />
+          </div>
+        </div>
+
+        <div class="founder-modal map-modal" id="map-modal-5" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-5-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 5</p>
+            <h3 id="map-modal-5-title">Hospital accessibility</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/5_UTS_layout_hospital_accessibility.png" alt="Hospital accessibility overlay." />
+          </div>
+        </div>
+
+        <div class="founder-modal map-modal" id="map-modal-6" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-6-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 6</p>
+            <h3 id="map-modal-6-title">Urban accessibility composite</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/6_UTS_layout_urban_accessibility_composite.png" alt="Composite urban accessibility map." />
+          </div>
+        </div>
+
+        <div class="founder-modal map-modal" id="map-modal-7" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-7-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 7</p>
+            <h3 id="map-modal-7-title">Competitor listings</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/7_UTS_layout_competitor_lisitngs.png" alt="Competitor listing distribution map." />
+          </div>
+        </div>
+
+        <div class="founder-modal map-modal" id="map-modal-8" style="display: none;">
+          <a class="founder-modal-backdrop" href="#top" aria-label="Close map"></a>
+          <div class="founder-modal-card map-modal-card" role="dialog" aria-modal="true" aria-labelledby="map-modal-8-title">
+            <a class="founder-modal-close" href="#top" aria-label="Close map">×</a>
+            <p class="founder-role">Map Frame 8</p>
+            <h3 id="map-modal-8-title">Competitor listing density</h3>
+            <img class="map-frame map-frame-modal" src="assets/research-maps/8_UTS_layout_competitor_lisitngs_density.png" alt="Competitor listing density heatmap." />
+          </div>
+        </div>
 
         <section class="section section-light next-steps-section">
           <div class="next-steps-intro">

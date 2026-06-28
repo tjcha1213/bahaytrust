@@ -876,6 +876,36 @@ h3 {
   padding: 0;
 }
 
+.map-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  transition: transform 180ms ease;
+}
+
+.map-card-link:hover {
+  transform: translateY(-2px);
+}
+
+.map-card-link .map-copy {
+  position: relative;
+}
+
+.map-card-link .map-copy::after {
+  content: "Open map";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(232, 244, 255, 0.96);
+  border: 1px solid rgba(53, 107, 176, 0.14);
+  color: #355a88;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 .map-frame {
   display: block;
   width: 100%;
@@ -887,6 +917,20 @@ h3 {
 
 .map-copy {
   padding: 22px 22px 24px;
+}
+
+.map-modal-card {
+  width: min(1120px, 100%);
+  padding: 28px 26px 26px;
+}
+
+.map-frame-modal {
+  margin-top: 18px;
+  aspect-ratio: auto;
+  max-height: 76vh;
+  border: 1px solid var(--line-dark);
+  border-radius: 22px;
+  background: #f7fbff;
 }
 
 .map-insight-list {
