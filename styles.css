@@ -778,122 +778,138 @@ h3 {
 .founder-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(8, 22, 42, 0.68);
-  backdrop-filter: blur(14px) saturate(1.4);
+  background: rgba(6, 16, 34, 0.72);
+  backdrop-filter: blur(18px) saturate(1.5);
 }
 
-/* Two-column card */
+/* Single-panel immersive card */
 .founder-modal-card {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  width: min(820px, 100%);
-  max-height: min(86vh, 940px);
-  border-radius: 24px;
+  width: min(460px, 100%);
+  height: min(680px, 88vh);
+  border-radius: 28px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow:
-    0 2px 0 rgba(255,255,255,0.08) inset,
-    0 40px 100px rgba(8, 22, 42, 0.5),
-    0 8px 24px rgba(8, 22, 42, 0.28);
+    0 2px 0 rgba(255, 255, 255, 0.1) inset,
+    0 48px 120px rgba(6, 16, 34, 0.6),
+    0 12px 32px rgba(6, 16, 34, 0.35);
 }
 
-/* Left portrait panel */
-.founder-modal-portrait {
-  position: relative;
-  overflow: hidden;
-  background: #0d2240;
-}
-
+/* Photo fills the entire card as background */
 .founder-modal-photo {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  min-height: 340px;
 }
 
-/* Gradient name overlay at bottom of portrait */
-.founder-modal-portrait-label {
+/* Gradient overlay: transparent at top, dark at ~45% downward */
+.founder-modal-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 48px 18px 18px;
-  background: linear-gradient(to top, rgba(5,16,36,0.9) 0%, transparent 100%);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 32%,
+    rgba(6, 14, 30, 0.55) 48%,
+    rgba(6, 14, 30, 0.88) 62%,
+    rgba(6, 14, 30, 0.97) 72%
+  );
 }
 
-.founder-modal-portrait-label .founder-role {
-  color: rgba(160, 200, 255, 0.82);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
+/* Scrollable content area sitting on the gradient */
+.founder-modal-content {
+  overflow-y: auto;
+  max-height: 62%;
+  padding: 0 26px 28px;
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+
+.founder-modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+.founder-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.22);
+  border-radius: 4px;
+}
+
+/* Role label */
+.founder-modal-content .founder-role {
+  color: rgba(160, 205, 255, 0.78);
+  font-size: 0.67rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin: 0 0 6px;
 }
 
-.founder-modal-portrait-label h3 {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.3;
+/* Name */
+.founder-modal-content h3 {
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+/* Divider */
+.founder-modal-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.16);
+  margin: 0 0 16px;
+}
+
+/* Tagline */
+.founder-modal-tagline {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(220, 235, 255, 0.9);
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+
+/* Bio body */
+.founder-modal-detail p {
+  font-size: 0.82rem;
+  line-height: 1.78;
+  color: rgba(190, 210, 240, 0.78);
   margin: 0;
 }
 
-/* Right content panel */
-.founder-modal-body {
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  padding: 32px 28px 28px;
-  background: linear-gradient(160deg, #ffffff 0%, #f0f6ff 100%);
-}
-
+/* Close button — top right, glassy */
 .founder-modal-close {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 16px;
+  right: 16px;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(15, 42, 73, 0.08);
-  color: #1e4a7a;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.18s, color 0.18s;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .founder-modal-close:hover {
-  background: rgba(15, 42, 73, 0.18);
-  color: #0d2240;
-}
-
-.founder-modal-tagline {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1a4070;
-  margin: 0 0 20px;
-  line-height: 1.5;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(26, 64, 112, 0.12);
-}
-
-.founder-modal-detail {
-  flex: 1;
-}
-
-.founder-modal-detail p {
-  font-size: 0.88rem;
-  line-height: 1.75;
-  color: #374151;
-  margin: 0;
+  background: rgba(255, 255, 255, 0.26);
+  color: #fff;
 }
 
 .research-stack {
