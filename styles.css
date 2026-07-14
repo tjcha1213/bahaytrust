@@ -805,6 +805,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  filter: grayscale(100%);
 }
 
 /* Gradient overlay: transparent at top, dark at ~45% downward */
@@ -844,8 +845,9 @@ h3 {
 
 /* Role label */
 .founder-modal-content .founder-role {
-  color: rgba(160, 205, 255, 0.78);
+  color: rgba(200, 225, 255, 0.95);
   font-size: 0.67rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin: 0 0 6px;
@@ -854,10 +856,11 @@ h3 {
 /* Name */
 .founder-modal-content h3 {
   color: #ffffff;
-  font-size: 1.45rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   line-height: 1.2;
   margin: 0 0 14px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
 
 /* Divider */
@@ -869,19 +872,19 @@ h3 {
 
 /* Tagline */
 .founder-modal-tagline {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: rgba(220, 235, 255, 0.9);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: rgba(240, 248, 255, 1);
   margin: 0 0 14px;
   line-height: 1.55;
 }
 
 /* Bio body */
 .founder-modal-detail p {
-  font-size: 0.86rem;
-  font-weight: 500;
-  line-height: 1.78;
-  color: rgba(230, 240, 255, 0.95);
+  font-size: 0.87rem;
+  font-weight: 600;
+  line-height: 1.8;
+  color: rgba(240, 248, 255, 1);
   margin: 0;
 }
 
