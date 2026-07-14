@@ -878,9 +878,10 @@ h3 {
 
 /* Bio body */
 .founder-modal-detail p {
-  font-size: 0.82rem;
+  font-size: 0.86rem;
+  font-weight: 500;
   line-height: 1.78;
-  color: rgba(190, 210, 240, 0.78);
+  color: rgba(230, 240, 255, 0.95);
   margin: 0;
 }
 
