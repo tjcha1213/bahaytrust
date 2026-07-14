@@ -805,7 +805,6 @@ h3 {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(100%);
 }
 
 /* Gradient overlay: transparent at top, dark at ~45% downward */
