@@ -1278,11 +1278,24 @@ h3 {
 
   .topbar-links {
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+  .topbar-links a {
+    font-size: 0.82rem;
+    font-weight: 600;
   }
 }
 
 @media (max-width: 640px) {
+  .topbar-links {
+    gap: 10px;
+  }
+  .topbar-links a {
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
   .page-shell {
     width: min(100% - 18px, 1180px);
     padding-top: 10px;
