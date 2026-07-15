@@ -1289,10 +1289,14 @@ h3 {
 
 @media (max-width: 640px) {
   .topbar-links {
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+    flex-wrap: nowrap;
   }
   .topbar-links a {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 600;
   }
 
