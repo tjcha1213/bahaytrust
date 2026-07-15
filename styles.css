@@ -819,9 +819,9 @@ h3 {
     to bottom,
     transparent 0%,
     transparent 32%,
-    rgba(6, 14, 30, 0.55) 48%,
-    rgba(6, 14, 30, 0.88) 62%,
-    rgba(6, 14, 30, 0.97) 72%
+    rgba(242, 243, 245, 0.55) 48%,
+    rgba(242, 243, 245, 0.88) 62%,
+    rgba(242, 243, 245, 0.97) 72%
   );
 }
 
@@ -845,7 +845,7 @@ h3 {
 
 /* Role label */
 .founder-modal-content .founder-role {
-  color: rgba(200, 225, 255, 0.95);
+  color: rgba(0, 0, 0, 1);
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -860,13 +860,13 @@ h3 {
   font-weight: 800;
   line-height: 1.2;
   margin: 0 0 14px;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 1);
 }
 
 /* Divider */
 .founder-modal-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 1);
   margin: 0 0 16px;
 }
 
@@ -874,7 +874,7 @@ h3 {
 .founder-modal-tagline {
   font-size: 0.92rem;
   font-weight: 700;
-  color: rgba(240, 248, 255, 1);
+  color: rgba(0, 0, 0, 1);
   margin: 0 0 14px;
   line-height: 1.55;
 }
@@ -884,7 +884,7 @@ h3 {
   font-size: 0.87rem;
   font-weight: 600;
   line-height: 1.8;
-  color: rgba(240, 248, 255, 1);
+  color: rgba(0, 0, 0, 1);
   margin: 0;
 }
 
