@@ -902,7 +902,7 @@ h3 {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(8px);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
@@ -914,29 +914,6 @@ h3 {
 .founder-modal-close:hover {
   background: rgba(255, 255, 255, 0.26);
   color: #fff;
-}
-
-.founder-modal-photo {
-  display: block;
-  width: 108px;
-  height: 108px;
-  margin: 8px 0 18px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.92);
-  box-shadow: 0 14px 28px rgba(15, 42, 73, 0.14);
-}
-
-.founder-modal-card h3 {
-  color: #4338ca;
-}
-
-.founder-modal-detail {
-  margin-top: 14px;
-}
-
-.founder-modal-detail p {
-  margin-bottom: 0;
 }
 
 .research-stack {
