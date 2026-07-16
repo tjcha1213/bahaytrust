@@ -900,15 +900,15 @@ h3 {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(128, 128, 128, 0.14);
   backdrop-filter: blur(8px);
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(128, 128, 128, 0.5);
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.18s, color 0.18s;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(128, 128, 128, 0.8);
 }
 
 .founder-modal-close:hover {
