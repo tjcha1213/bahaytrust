@@ -1491,7 +1491,9 @@ h3 {
   }
 
   .map-frame-modal {
-    max-height: calc(90vh - 75px);
+    height: 68vh !important;
+    width: 100%;
+    object-fit: cover;
     border-radius: 10px;
   }
 
