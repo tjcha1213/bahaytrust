@@ -15,6 +15,7 @@ document.querySelectorAll(".reveal").forEach((card) => observer.observe(card));
 const mapModalIds = Array.from({ length: 8 }, (_, index) => `map-modal-${index + 1}`);
 const mapModalIndexById = new Map(mapModalIds.map((id, index) => [id, index]));
 const swipeState = new WeakMap();
+const SWIPE_THRESHOLD = 42;
 
 function resolveMapModalIdFromHash(hash) {
   if (!hash) return null;
@@ -35,24 +36,44 @@ function shouldIgnoreSwipeTarget(target) {
 
 document.querySelectorAll(".map-stage").forEach((stage) => {
   stage.style.touchAction = "pan-y";
+  stage.style.cursor = "grab";
 
   stage.addEventListener("pointerdown", (event) => {
-    if (event.pointerType !== "touch" || shouldIgnoreSwipeTarget(event.target)) return;
+    if (shouldIgnoreSwipeTarget(event.target)) return;
     const modal = stage.closest(".map-modal");
     if (!modal) return;
 
+    stage.setPointerCapture?.(event.pointerId);
     swipeState.set(stage, {
       pointerId: event.pointerId,
+      pointerType: event.pointerType,
       startX: event.clientX,
       startY: event.clientY,
       modalId: modal.id,
-      locked: false
+      locked: false,
+      swiping: false
     });
+  });
+
+  stage.addEventListener("pointermove", (event) => {
+    const state = swipeState.get(stage);
+    if (!state || state.pointerId !== event.pointerId || state.locked) return;
+
+    const deltaX = event.clientX - state.startX;
+    const deltaY = event.clientY - state.startY;
+    const absX = Math.abs(deltaX);
+    const absY = Math.abs(deltaY);
+
+    if (absX < SWIPE_THRESHOLD || absX < absY * 1.15) return;
+
+    state.swiping = true;
+    event.preventDefault();
   });
 
   stage.addEventListener("pointerup", (event) => {
     const state = swipeState.get(stage);
     if (!state || state.pointerId !== event.pointerId || state.locked) return;
+    stage.releasePointerCapture?.(event.pointerId);
     swipeState.delete(stage);
 
     const deltaX = event.clientX - state.startX;
@@ -60,14 +81,15 @@ document.querySelectorAll(".map-stage").forEach((stage) => {
     const absX = Math.abs(deltaX);
     const absY = Math.abs(deltaY);
 
-    if (absX < 42 || absX < absY * 1.2) return;
+    if (absX < SWIPE_THRESHOLD || absX < absY * 1.15) return;
 
     event.preventDefault();
     state.locked = true;
     navigateMapModal(state.modalId, deltaX < 0 ? 1 : -1);
   });
 
-  stage.addEventListener("pointercancel", () => {
+  stage.addEventListener("pointercancel", (event) => {
+    stage.releasePointerCapture?.(event.pointerId);
     swipeState.delete(stage);
   });
 });
