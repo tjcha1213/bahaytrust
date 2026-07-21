@@ -1464,7 +1464,9 @@ h3 {
   .map-modal-card {
     padding: 12px 10px 12px;
     border-radius: 16px;
-    width: 98vw;
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    margin: 0 auto;
   }
 
   .map-modal-card .founder-role {
