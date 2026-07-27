@@ -808,6 +808,12 @@ h3 {
   object-position: top center;
 }
 
+.founder-modal-photo-hun {
+  object-fit: cover;
+  object-position: center 18%;
+  transform: scale(1.08);
+}
+
 /* Gradient overlay: transparent at top, dark at ~45% downward */
 .founder-modal-overlay {
   position: absolute;
