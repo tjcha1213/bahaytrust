@@ -861,6 +861,11 @@ h3 {
   object-position: top center;
 }
 
+.founder-modal-photo-regine {
+  height: 106%;
+  object-position: 44% 14%;
+}
+
 /* Gradient overlay: transparent at top, dark at ~45% downward */
 .founder-modal-overlay {
   position: absolute;
