@@ -693,6 +693,19 @@ h3 {
   box-shadow: 0 14px 32px rgba(98, 148, 217, 0.08);
 }
 
+.adviser-slot {
+  border-style: dashed;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(233, 241, 255, 0.82));
+}
+
+.adviser-slot h3 {
+  color: #2f6fd6;
+}
+
+.adviser-slot .adviser-summary {
+  cursor: default;
+}
+
 .research-paper {
   margin-bottom: 24px;
   padding: 24px;
