@@ -135,7 +135,6 @@
           <div class="advisers-grid">
             <article class="adviser-card reveal">
               <a class="adviser-summary" href="#advisor-hong-modal">
-                <img class="adviser-card-photo" src="assets/hong-qu.png" alt="Portrait of Hong Qu" loading="lazy" />
                 <p class="adviser-role">Academic + Policy</p>
                 <h3>Hong Qu</h3>
                 <p>
@@ -146,7 +145,6 @@
             </article>
             <article class="adviser-card reveal">
               <a class="adviser-summary" href="#advisor-sanghak-modal">
-                <img class="adviser-card-photo" src="assets/sanghak-oh.jpg" alt="Portrait of Sanghak Oh" loading="lazy" />
                 <p class="adviser-role">Security Architecture</p>
                 <h3>Sanghak Oh</h3>
                 <p>
@@ -157,7 +155,6 @@
             </article>
             <article class="adviser-card reveal">
               <a class="adviser-summary" href="#advisor-jaesung-modal">
-                <img class="adviser-card-photo adviser-photo-contain" src="assets/jaesung-james-park.png" alt="Portrait of Jaesung James Park" loading="lazy" />
                 <p class="adviser-role">Payments + Transactions</p>
                 <h3>Jaesung James Park</h3>
                 <p>
@@ -166,27 +163,6 @@
                   advising on payments and transaction architecture.
                 </p>
               </a>
-            </article>
-            <article class="adviser-card adviser-slot reveal">
-              <div class="adviser-summary">
-                <p class="adviser-role">Operations Management</p>
-                <h3>Open adviser slot</h3>
-                <p>
-                  Reserved for an operator who can help <strong>Roomie</strong>
-                  strengthen service delivery, internal workflows, partner
-                  onboarding, and repeatable execution.
-                </p>
-              </div>
-            </article>
-            <article class="adviser-card adviser-slot reveal">
-              <div class="adviser-summary">
-                <p class="adviser-role">Real Estate</p>
-                <h3>Open adviser slot</h3>
-                <p>
-                  Reserved for an adviser with real estate, brokerage, development,
-                  or property-management experience in dense urban rental markets.
-                </p>
-              </div>
             </article>
           </div>
         </section>
@@ -329,61 +305,70 @@
 
         <div class="founder-modal" id="advisor-hong-modal" style="display: none;">
           <a class="founder-modal-backdrop" href="#team-founders" aria-label="Close advisor bio"></a>
-          <div class="founder-modal-card founder-modal-text-card" role="dialog" aria-modal="true" aria-labelledby="advisor-hong-name">
+          <div class="founder-modal-card" role="dialog" aria-modal="true" aria-labelledby="advisor-hong-name">
+            <img class="founder-modal-photo" src="assets/hong-qu.png" alt="Portrait of Hong Qu" />
             <a class="founder-modal-close" href="#team-founders" aria-label="Close advisor bio">×</a>
-            <img class="adviser-modal-photo" src="assets/hong-qu.png" alt="Portrait of Hong Qu" />
-            <p class="founder-role">Academic + Policy</p>
-            <h3 id="advisor-hong-name">Hong Qu</h3>
-            <p class="founder-preview">
-              Harvard Kennedy School professor and policy expert with early YouTube and Google product experience.
-            </p>
-            <div class="founder-modal-detail">
-              <p>
-                Harvard Kennedy School professor and policy expert with prior industry experience from the early YouTube and
-                Google era, bringing a strong combination of public-policy thinking, product judgment, and experimental
-                rigor. His background in user testing, A/B testing, and evidence-based iteration is especially relevant to
-                <strong>Roomie</strong>'s early product design and market-learning process.
-              </p>
+            <div class="founder-modal-overlay">
+              <div class="founder-modal-content">
+                <p class="founder-role">Academic + Policy</p>
+                <h3 id="advisor-hong-name">Hong Qu</h3>
+                <div class="founder-modal-divider"></div>
+                <p class="founder-modal-tagline">Harvard Kennedy School professor and policy expert with early YouTube and Google product experience.</p>
+                <div class="founder-modal-detail">
+                  <p>
+                    Harvard Kennedy School professor and policy expert with prior industry experience from the early YouTube and
+                    Google era, bringing a strong combination of public-policy thinking, product judgment, and experimental
+                    rigor. His background in user testing, A/B testing, and evidence-based iteration is especially relevant to
+                    <strong>Roomie</strong>'s early product design and market-learning process.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="founder-modal" id="advisor-sanghak-modal" style="display: none;">
           <a class="founder-modal-backdrop" href="#team-founders" aria-label="Close advisor bio"></a>
-          <div class="founder-modal-card founder-modal-text-card" role="dialog" aria-modal="true" aria-labelledby="advisor-sanghak-name">
+          <div class="founder-modal-card" role="dialog" aria-modal="true" aria-labelledby="advisor-sanghak-name">
+            <img class="founder-modal-photo" src="assets/sanghak-oh.jpg" alt="Portrait of Sanghak Oh" />
             <a class="founder-modal-close" href="#team-founders" aria-label="Close advisor bio">×</a>
-            <img class="adviser-modal-photo" src="assets/sanghak-oh.jpg" alt="Portrait of Sanghak Oh" />
-            <p class="founder-role">Security Architecture</p>
-            <h3 id="advisor-sanghak-name">Sanghak Oh</h3>
-            <p class="founder-preview">
-              Assistant professor of computer science at Hanyang University advising on security, platform safeguards, and technical risk.
-            </p>
-            <div class="founder-modal-detail">
-              <p>
-                Sanghak Oh is an assistant professor of computer science at Hanyang University. He advises
-                <strong>Roomie</strong> on security-sensitive product and infrastructure choices, helping the team think
-                through platform safeguards, user data protection, and technical risks that affect trust in a housing marketplace.
-              </p>
+            <div class="founder-modal-overlay">
+              <div class="founder-modal-content">
+                <p class="founder-role">Security Architecture</p>
+                <h3 id="advisor-sanghak-name">Sanghak Oh</h3>
+                <div class="founder-modal-divider"></div>
+                <p class="founder-modal-tagline">Assistant professor of computer science at Hanyang University advising on security, platform safeguards, and technical risk.</p>
+                <div class="founder-modal-detail">
+                  <p>
+                    Sanghak Oh is an assistant professor of computer science at Hanyang University. He advises
+                    <strong>Roomie</strong> on security-sensitive product and infrastructure choices, helping the team think
+                    through platform safeguards, user data protection, and technical risks that affect trust in a housing marketplace.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="founder-modal" id="advisor-jaesung-modal" style="display: none;">
           <a class="founder-modal-backdrop" href="#team-founders" aria-label="Close advisor bio"></a>
-          <div class="founder-modal-card founder-modal-text-card" role="dialog" aria-modal="true" aria-labelledby="advisor-jaesung-name">
+          <div class="founder-modal-card" role="dialog" aria-modal="true" aria-labelledby="advisor-jaesung-name">
+            <img class="founder-modal-photo" src="assets/jaesung-james-park.png" alt="Portrait of Jaesung James Park" />
             <a class="founder-modal-close" href="#team-founders" aria-label="Close advisor bio">×</a>
-            <img class="adviser-modal-photo adviser-photo-contain" src="assets/jaesung-james-park.png" alt="Portrait of Jaesung James Park" />
-            <p class="founder-role">Payments + Transactions</p>
-            <h3 id="advisor-jaesung-name">Jaesung James Park</h3>
-            <p class="founder-preview">
-              Senior research fellow at Korea SMEs & Startups Institute (KOSBI) with an extensive research career, advising on payments and transaction architecture.
-            </p>
-            <div class="founder-modal-detail">
-              <p>
-                Jaesung James Park is a senior research fellow at Korea SMEs & Startups Institute (KOSBI) with an extensive research career in the field. He
-                advises <strong>Roomie</strong> on payments and transaction architecture, including the practical design choices
-                needed for reliable marketplace flows, traceable transactions, and scalable financial operations.
-              </p>
+            <div class="founder-modal-overlay">
+              <div class="founder-modal-content">
+                <p class="founder-role">Payments + Transactions</p>
+                <h3 id="advisor-jaesung-name">Jaesung James Park</h3>
+                <div class="founder-modal-divider"></div>
+                <p class="founder-modal-tagline">Senior research fellow at Korea SMEs & Startups Institute (KOSBI) advising on payments and transaction architecture.</p>
+                <div class="founder-modal-detail">
+                  <p>
+                    Jaesung James Park is a senior research fellow at Korea SMEs & Startups Institute (KOSBI) with an extensive research career in the field. He
+                    advises <strong>Roomie</strong> on payments and transaction architecture, including the practical design choices
+                    needed for reliable marketplace flows, traceable transactions, and scalable financial operations.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

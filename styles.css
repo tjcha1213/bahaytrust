@@ -696,19 +696,6 @@ h3 {
   box-shadow: 0 14px 32px rgba(98, 148, 217, 0.08);
 }
 
-.adviser-slot {
-  border-style: dashed;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(233, 241, 255, 0.82));
-}
-
-.adviser-slot h3 {
-  color: #2f6fd6;
-}
-
-.adviser-slot .adviser-summary {
-  cursor: default;
-}
-
 .research-paper {
   margin-bottom: 24px;
   padding: 24px;
@@ -731,6 +718,7 @@ h3 {
 }
 
 .founder-card::before,
+.adviser-card::before,
 .metric-card::before,
 .partner-card::before {
   content: "";
@@ -778,22 +766,6 @@ h3 {
   margin-bottom: 0;
 }
 
-.adviser-card-photo {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  margin-bottom: 18px;
-  border-radius: 20px;
-  background: var(--blue-soft);
-  object-fit: cover;
-  object-position: center;
-}
-
-.adviser-photo-contain {
-  background: #ffffff;
-  object-fit: contain;
-}
-
 /* ── Founder / Advisor modal ── */
 .founder-modal {
   position: fixed;
@@ -828,70 +800,6 @@ h3 {
     0 2px 0 rgba(255, 255, 255, 0.1) inset,
     0 48px 120px rgba(6, 16, 34, 0.6),
     0 12px 32px rgba(6, 16, 34, 0.35);
-}
-
-.founder-modal-text-card {
-  height: auto;
-  min-height: min(520px, 88vh);
-  padding: 44px 32px 34px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(86, 151, 210, 0.28), transparent 34%),
-    radial-gradient(circle at 92% 2%, rgba(30, 87, 153, 0.18), transparent 32%),
-    linear-gradient(145deg, #f7f8fa 0%, #eef3f8 48%, #dfe8f2 100%);
-  border: 1px solid rgba(255, 255, 255, 0.72);
-}
-
-.adviser-modal-photo {
-  display: block;
-  width: calc(100% + 64px);
-  height: 260px;
-  flex: 0 0 auto;
-  margin: -44px -32px 28px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.founder-modal-text-card .founder-role {
-  margin: 0 0 10px;
-  color: #1a4f8e;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.founder-modal-text-card h3 {
-  margin: 0 0 16px;
-  color: #101827;
-  font-size: 1.55rem;
-  font-weight: 800;
-  line-height: 1.15;
-}
-
-.founder-modal-text-card .founder-preview {
-  margin: 0;
-  color: #253041;
-  font-size: 0.98rem;
-  font-weight: 700;
-  line-height: 1.65;
-}
-
-.founder-modal-text-card .founder-modal-detail {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(26, 79, 142, 0.18);
-  overflow-y: auto;
-}
-
-.founder-modal-text-card .founder-modal-detail a {
-  color: #1a4f8e;
-  font-weight: 800;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
 }
 
 /* Photo fills the entire card as background */
